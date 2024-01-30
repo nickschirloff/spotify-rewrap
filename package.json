@@ -1,0 +1,24 @@
+{
+  "name": "spotify-rewrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd server && nodemon server",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "installClient": "cd client && npm install",
+    "installServer": "cd server && npm install",
+    "install": "installClient && installServer"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "react-router-dom": "^6.21.3",
+    "sass": "^1.70.0"
+  }
+}

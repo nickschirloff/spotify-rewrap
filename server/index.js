@@ -1,9 +1,16 @@
 require('dotenv').config();
 const express = require('express');
 const SpotifyWebAPI = require('spotify-web-api-node');
+const queryString = require('querystring');
+const cors = require('cors');
+const axios = require('axios');
 
 const app = express();
-const port = 8888;
+app.use(cors());
+const PORT = 8888;
+
+// Testing variable for client port
+const CLIENT_PORT = 5173;
 
 const spotifyAPI = new SpotifyWebAPI({
     clientId: process.env.CLIENT_ID,
@@ -45,21 +52,47 @@ app.get("/callback", (req, res) => {
     spotifyAPI.authorizationCodeGrant(code).then((data) =>{
         spotifyAPI.setAccessToken(data.body['access_token']);
         spotifyAPI.setRefreshToken(data.body['refresh_token']);
+        console.log("Got: " + spotifyAPI.getRefreshToken());
         const expiresIn = data.body['expires_in'];
 
-        res.send("Success!");
+        const queryParams = queryString.stringify({
+            access_token: data.body['access_token'],
+            refresh_token: data.body['refresh_token'],
+            expires_in: expiresIn
+        });
 
-        setInterval( async() => {
-            const data = await spotifyAPI.refreshAccessToken();
-            spotifyAPI.setAccessToken(data.body['access_token']);
-        }, (expiresIn/2) * 1000);
+        res.redirect(`http://localhost:${CLIENT_PORT}/?${queryParams}`);
     }).catch(error => {
         console.error("Error: " + error);
-        res.send("Error Getting Access/Refresh Token: " + error);
+        res.redirect(`http://localhost:${CLIENT_PORT}/?${queryString.stringify({ error: 'invalid_token' })}`)
     });
 
 });
 
-app.listen(port, () => {
-    console.log(`Express app listening at port: ${port}...`);
+app.get("/refresh_token", (req, res) => {
+
+    const { refresh_token } = req.query;
+
+    axios({
+        method: 'post',
+        url:'https://accounts.spotify.com/api/token',
+        data: queryString.stringify({
+            grant_type: 'refresh_token',
+            refresh_token: refresh_token,
+        }),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            Authorization: `Basic ${new Buffer.from(`${spotifyAPI.getClientId()}:${spotifyAPI.getClientSecret()}`).toString('base64')}`
+        }
+    })
+    .then(response => {
+        res.send(response.data);
+    })
+    .catch(error => {
+        res.send(error);
+    });
+});
+
+app.listen(PORT, () => {
+    console.log(`Express app listening at port: ${PORT}...`);
 });
