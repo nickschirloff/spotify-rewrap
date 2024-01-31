@@ -5,19 +5,13 @@
     height: $navbar-height;
     display: flex;
     align-items: center;
-    vertical-align: mid;
     justify-content: space-between;
     background-color: $spotify-dark-gray;
-
 
     .navbarLeft {
         margin-left: 15px;
         color: white;
         font-size: 1.25rem;
-    }
-
-    .navbarRight {
-        margin-right: 15px;
     }
 
     a {
@@ -28,22 +22,38 @@
     }
 
     .sidebar {
+        width: 20vw;
+        display: flex;
+        flex-direction: row-reverse;
         position: relative;
 
         img {
             height: 50%;
+            margin-right: 15px;
             display: block;
         }
 
         .sidebarExpand {
             width: 20vw;
+            padding: 1em;
             position: absolute;
             right: -20vw;
             top: calc($sidebar-icon-height + (($navbar-height - $sidebar-icon-height) / 2));
             animation: slide 0.3s forwards;
             color: white;
             background-color: $spotify-dark-gray;
+        }
 
+        .sidebarItem {
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $spotify-light-gray;
+            }
         }
     }
 
@@ -51,8 +61,8 @@
 }
 
 @keyframes slide {
-
-    100% {
-        right: -15px;
+    from, to {
+        overflow: hidden;
+        right: 0;
     }
 }

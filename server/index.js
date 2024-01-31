@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-    const scopes = ['user-read-private', 'user-read-email'];
+    const scopes = ['user-read-private', 'user-read-email', 'playlist-read-collaborative'];
     const state = generateState();
     res.redirect(spotifyAPI.createAuthorizeURL(scopes, state));
 });

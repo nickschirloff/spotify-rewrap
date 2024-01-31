@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/navbar/Navbar';
 import Login from './pages/login/Login';
 import Home from './pages/home/Home';
+import Rewrap from './pages/rewrap/Rewrap';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { accessToken, getCurrentUserProfile, logout } from './models/SpotifyLogic';
 import { useState, useEffect } from 'react';
@@ -17,7 +18,6 @@ function App() {
     const getProfileData = async() => {
       try {
         const { data } = await getCurrentUserProfile();
-        console.log("Data: " + JSON.stringify(data));
         setProfile(data); 
       } catch(e) {
         console.error(e);
@@ -28,16 +28,22 @@ function App() {
 
   return (
     <>
-      <Navbar />
       {!token ? (
         <Login /> 
         ) : (
-        <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-        </Routes>
-        </Router>
+        <>
+          {profile && (
+            <>
+            <Navbar />
+            <Router>
+              <Routes>
+                <Route path="/" element={<Home profileData={profile} />} />
+                <Route path="/rewrap" element={<Rewrap />} />
+              </Routes>
+            </Router>
+          </>
+          )}
+        </>
         )
       }
 
@@ -46,3 +52,11 @@ function App() {
 }
 
 export default App
+{/* <>
+<Navbar />
+<Router>
+  <Routes>
+    <Route path="/" element={<Home profileData={profile} />} />
+  </Routes>
+</Router>
+</> */}

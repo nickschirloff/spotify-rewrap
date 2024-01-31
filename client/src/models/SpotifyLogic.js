@@ -46,7 +46,6 @@ const refreshToken = async () => {
         window.localStorage.setItem(LOCALSTORAGE_KEYS.accessToken, data.access_token);
         window.localStorage.setItem(LOCALSTORAGE_KEYS.timestamp, Date.now());
 
-        console.log("Refreshed");
         window.location.reload();
 
     } catch(err) {
@@ -94,3 +93,5 @@ axios.defaults.headers['Authorization'] = `Bearer ${accessToken}`;
 axios.defaults.headers['Content-Type'] = 'application/json';
 
 export const getCurrentUserProfile = async() => await axios.get('/me');
+
+export const getCurrentUserPlaylists = async() => await axios.get('/me/playlists?offset=0&limit=40');

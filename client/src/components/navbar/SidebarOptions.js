@@ -1,26 +1,23 @@
-import MenuIcon from '../../assets/icons/navbar/hamburger-menu.svg';
+import GitHubIcon from '../../assets/icons/navbar/github-icon.svg';
+import WebsiteIcon from '../../assets/icons/navbar/website-icon.svg';
+import SignOutIcon from '../../assets/icons/navbar/signout-icon.svg';
 
 const sidebarOptions = [
     {
-        name: "Source",
-        link: "https://github.com/nickschirloff/spotify-rewrap",
-        icon: MenuIcon
-    },
-    {
         name: "Github",
-        link: "",
-        icon: ""
+        link: "https://github.com/nickschirloff/spotify-rewrap",
+        icon: GitHubIcon
     },
     {
         name: "Website",
         link: "",
-        icon: ""
+        icon: WebsiteIcon
     },
     {
-        name: "",
+        name: "Sign Out",
         link: "",
-        icon: ""
-    }
+        icon: SignOutIcon
+    },
 ];
 
 export default sidebarOptions;

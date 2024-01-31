@@ -9,9 +9,7 @@ const Navbar = () => {
       <div className={styles.navbarLeft}>
         <a href="/">Spotify Re-Wrap</a>
       </div>
-      <div className={styles.navbarRight}>
-        <Sidebar />
-      </div>
+      <Sidebar />
     </div>
   )
 }
