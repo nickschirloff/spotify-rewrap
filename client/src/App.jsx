@@ -10,8 +10,6 @@ function App() {
 
   const [token, setToken] = useState(null);
   const [profile, setProfile] = useState(null);
-  console.log("TOK: " + token);
-  console.log("PRO: " + profile);
 
   useEffect(() => {
     setToken(accessToken);

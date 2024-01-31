@@ -1,8 +1,9 @@
+import styles from './styles.module.scss';
 
 const Home = () => {
   return (
-    <div>
-      Home
+    <div className={styles.home}>
+      {/* Home */}
     </div>
   )
 }

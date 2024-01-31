@@ -1,12 +1,14 @@
 @import '../../variables.scss';
 
 .navbar {
-    width: 100vw;
-    height: 10vh;
+    width: 100%;
+    height: $navbar-height;
     display: flex;
     align-items: center;
+    vertical-align: mid;
     justify-content: space-between;
     background-color: $spotify-dark-gray;
+
 
     .navbarLeft {
         margin-left: 15px;
@@ -14,8 +16,43 @@
         font-size: 1.25rem;
     }
 
+    .navbarRight {
+        margin-right: 15px;
+    }
+
     a {
+        cursor: pointer;
         color: white;
+        font-weight: bold;
         text-decoration: none;
+    }
+
+    .sidebar {
+        position: relative;
+
+        img {
+            height: 50%;
+            display: block;
+        }
+
+        .sidebarExpand {
+            width: 20vw;
+            position: absolute;
+            right: -20vw;
+            top: calc($sidebar-icon-height + (($navbar-height - $sidebar-icon-height) / 2));
+            animation: slide 0.3s forwards;
+            color: white;
+            background-color: $spotify-dark-gray;
+
+        }
+    }
+
+
+}
+
+@keyframes slide {
+
+    100% {
+        right: -15px;
     }
 }
