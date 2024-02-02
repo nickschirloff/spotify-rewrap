@@ -14,10 +14,7 @@ const Home = ({ profileData }) => {
     try {
       const playlistData = await getCurrentUserPlaylists();
       const playlistList = playlistData.data.items;
-      playlistList.map((item) => {
-        console.log("Playlist Name: " + item.name);
-      });
-      navigate('/rewrap', playlistList);
+      navigate('/rewrap', { state: playlistList });
 
     } catch(err) {
       console.log(err.message);

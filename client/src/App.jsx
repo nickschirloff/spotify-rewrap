@@ -51,12 +51,4 @@ function App() {
   )
 }
 
-export default App
-{/* <>
-<Navbar />
-<Router>
-  <Routes>
-    <Route path="/" element={<Home profileData={profile} />} />
-  </Routes>
-</Router>
-</> */}
+export default App;

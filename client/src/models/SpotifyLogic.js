@@ -95,3 +95,5 @@ axios.defaults.headers['Content-Type'] = 'application/json';
 export const getCurrentUserProfile = async() => await axios.get('/me');
 
 export const getCurrentUserPlaylists = async() => await axios.get('/me/playlists?offset=0&limit=40');
+
+export const getCurrentUserSongsFromPlaylist = async(id) => await axios.get(`/playlists/${id}/tracks`);
