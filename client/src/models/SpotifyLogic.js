@@ -18,7 +18,7 @@ export const logout = () => {
     for(const property in LOCALSTORAGE_KEYS) {
         window.localStorage.removeItem(LOCALSTORAGE_KEYS[property]);
     }
-    window.location = window.location.origin;
+    // window.location = window.location.origin;
 };
 
 const hasTokenExpired = () => {
@@ -39,7 +39,8 @@ const refreshToken = async () => {
         {
             console.error('No refresh token available.');
             logout();
-        }
+            return;
+        } 
 
         const { data } = await axios.get(`http://localhost:8888/refresh_token?refresh_token=${LOCALSTORAGE_VALUES.refreshToken}`);
 
@@ -65,7 +66,6 @@ const getAccessToken = () => {
     const hasError = urlParams.get('error');
   
     if(hasError || hasTokenExpired() || LOCALSTORAGE_VALUES.accessToken === 'undefined') {
-        console.log("Case 1");
         refreshToken();
     }
 

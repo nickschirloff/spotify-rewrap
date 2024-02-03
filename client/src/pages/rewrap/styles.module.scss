@@ -1,5 +1,72 @@
 @import '../../variables.scss';
 
+.playlistSelection {
+    width: 100%;
+    height: 90vh;
+
+
+    .playlistSelectionContainerLoading {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: $spotify-mid-gray;
+
+        p {
+            margin-top: 15px;
+            font-size: 1.15rem;
+        }
+    }
+
+    .playlistSelectionContainer {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        background-color: $spotify-mid-gray;
+
+        h1 {
+            margin: 40px 0 10px 0;
+            font-size: 28px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .playlistSelection {
+            height: 40vw;
+            margin-bottom: 40px;
+            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+
+            // ::-webkit-scrollbar {
+            //     width: 9px;
+            //     position: absolute;
+            //     left: 0;
+            // }
+
+            button {
+                padding: 1em 2em;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
 .rewrap {
     width: 100%;
     height: 90vh;

@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-const PlaylistItem = ({ playlistImg, playlistName, index, onClickFunction }) => {
+const PlaylistItem = ({ playlistImg, playlistName, index }) => {
   return (
     <div className={styles.playlistItem}>
       <div className={styles.playlistItemCover}>
@@ -8,7 +8,7 @@ const PlaylistItem = ({ playlistImg, playlistName, index, onClickFunction }) => 
       </div>
       <div className={styles.playlistItemData}>
         <h2>{playlistName}</h2>
-        <button onClick={() => onClickFunction(index)}>X</button>
+        <button>X</button>
       </div>
     </div>
   )

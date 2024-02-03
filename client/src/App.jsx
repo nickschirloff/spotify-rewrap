@@ -6,6 +6,7 @@ import Rewrap from './pages/rewrap/Rewrap';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { accessToken, getCurrentUserProfile, logout } from './models/SpotifyLogic';
 import { useState, useEffect } from 'react';
+import PlaylistSelection from './pages/rewrap/PlaylistSelection';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
             <Router>
               <Routes>
                 <Route path="/" element={<Home profileData={profile} />} />
+                <Route path="/playlistSelection" element={<PlaylistSelection />} />
                 <Route path="/rewrap" element={<Rewrap />} />
               </Routes>
             </Router>
