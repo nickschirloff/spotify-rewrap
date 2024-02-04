@@ -4,6 +4,7 @@ import { Audio } from 'react-loader-spinner';
 import { getCurrentUserPlaylists } from '../../models/SpotifyLogic';
 import { getWrappedPlaylists } from '../../models/PlaylistLogic';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PlaylistSelection = () => {
 
@@ -16,7 +17,12 @@ const PlaylistSelection = () => {
   const [userWrappedPlaylists, setUserWrappedPlaylists] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
   
+  const redirect = () => {
+    navigate('/rewrap', {state: userWrappedPlaylists});
+  }
 
   const getPlaylists = async() => {
     const playlistsData = await getCurrentUserPlaylists();
@@ -62,8 +68,9 @@ const PlaylistSelection = () => {
                 />
               })
             }
-            <button>Let's Go</button>
           </div>
+          <button onClick={redirect}>Let's Go</button>
+
         </div>
       }
     </div>

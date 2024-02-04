@@ -11,13 +11,15 @@ export const getWrappedPlaylists = (playlists) => {
     return wrappedPlaylists;
 };
 
-export const getRandomPlaylistAndSong = (playlists) => {
+export const getRandomPlaylistAndSong = async(playlists) => {
     const randomPlaylistIndex = Math.floor(Math.random() * playlists.length);
     const randomPlaylistID = playlists[randomPlaylistIndex].id;
 
-    const randomPlaylistTracks = getCurrentUserSongsFromPlaylist(randomPlaylistID);
+    const temp = await getCurrentUserSongsFromPlaylist(randomPlaylistID);
+    const randomPlaylistTracks = temp.data.items;
     const randomSongIndex = Math.floor(Math.random() * randomPlaylistTracks.length);
-    return randomPlaylistTracks[randomSongIndex];
+    const randomSongData = randomPlaylistTracks[randomSongIndex];
+    return randomSongData.track;
 }
 
 
