@@ -1,9 +1,9 @@
 
-# Spotify Re-Wrap
+# ReWrap
 
 Reminisce on your old favorites throughout the years.
 
-Spotify Re-Wrap is a game that will allow users to guess which year a song appeared in their top 100 Spotify Wrapped playlists.
+ReWrap is a game that will allow users to guess which year a song appeared in their yearly top 100 Spotify Wrapped playlists.
 
 For example:
 * Which year did 'Ring of Fire' by Johnny Cash make your top 100 list?
@@ -17,9 +17,25 @@ This project is still currently in development. The roadmap and completed steps 
 A few months ago, I saw a video online of someone who created a 'mega-playlist' comprised of every song that had appeared on  their Wrapped playlists. I thought the idea was fun, so I did the same, shuffling through the playlist and reliving memories with each song that played.
 
 I started to try and guess which year each particular song was frequently in my rotation, and that is where the inspiration for this project was born.
-## Notice
 
-You will need a Spotify premium account to be able to run this project, and in the future, to play the game!
+## Some Setup
+
+Spotify's web API does not allow for getting a user's Wrapped playlists. Despite Spotify automatically creating a playlist for Wrapped each year, these
+playlists are not returned upon a GET request from the API. Therefore, we have to create a copy, which is easy to do, but unconventional.
+
+* Go to your Wrapped playlist(s)
+[![alt text](/rewrap-step-1.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images)
+* Tap the three dots icon
+* Select "Add to other playlist"
+[![alt text](/rewrap-step-2.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images)
+* Create a new Playlist. It should be something along "Wrapped - {Year}"
+[![alt text](/rewrap-step-3.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images)
+
+
+The playlist can be named anything as long as it has the word "Wrapped" in the title, as well as a year within 2017-2023 (inclusive, the years Wrapped has been available). The given template is just to ensure playlists are not accidentally skipped by the playlist filter in the app.
+
+If you know of a way to access these playlists, please contact me with the information as to how and hopefully this step can be remedied in the future.
+
 ## Run Locally
 
 Clone the project
@@ -50,7 +66,7 @@ Create environment variables (steps listed below)
 Start the server
 
 ```bash
-  npm start
+  npm run dev
 ```
 
 
