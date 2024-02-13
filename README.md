@@ -24,12 +24,12 @@ Spotify's web API does not allow for getting a user's Wrapped playlists. Despite
 playlists are not returned upon a GET request from the API. Therefore, we have to create a copy, which is easy to do, but unconventional.
 
 * Go to your Wrapped playlist(s)
-[![alt text](rewrap-step-1.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images)
+[![alt text](rewrap-step-1.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images/rewrap-step-1.jpg)
 * Tap the three dots icon
 * Select "Add to other playlist"
-[![alt text](rewrap-step-2.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images)
+[![alt text](rewrap-step-2.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images/rewrap-step-2.jpg)
 * Create a new Playlist. It should be something along "Wrapped - {Year}"
-[![alt text](rewrap-step-3.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images)
+[![alt text](rewrap-step-3.jpg)](https://github.com/nickschirloff/spotify-rewrap/tree/main/git-images/rewrap-step-3.jpg)
 
 
 The playlist can be named anything as long as it has the word "Wrapped" in the title, as well as a year within 2017-2023 (inclusive, the years Wrapped has been available). The given template is just to ensure playlists are not accidentally skipped by the playlist filter in the app.
