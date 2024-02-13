@@ -30,12 +30,12 @@ playlists are not returned upon a GET request from the API. Therefore, we have t
 * Tap the three dots icon
 * Select "Add to other playlist"
 
-<img src="https://github.com/nickschirloff/spotify-rewrap/blob/main/git-images/rewrap-step-1.jpg" align="left" height="600">
+<img src="https://github.com/nickschirloff/spotify-rewrap/blob/main/git-images/rewrap-step-2.jpg" align="left" height="600">
 <br clear="left">
 
 * Create a new Playlist. It should be something along "Wrapped - {Year}"
 
-<img src="https://github.com/nickschirloff/spotify-rewrap/blob/main/git-images/rewrap-step-1.jpg" align="left" height="600">
+<img src="https://github.com/nickschirloff/spotify-rewrap/blob/main/git-images/rewrap-step-3.jpg" align="left" height="600">
 <br clear="left">
 
 
