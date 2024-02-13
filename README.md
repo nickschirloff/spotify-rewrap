@@ -25,11 +25,14 @@ playlists are not returned upon a GET request from the API. Therefore, we have t
 
 * Go to your Wrapped playlist(s)
 <img src="https://github.com/nickschirloff/spotify-rewrap/blob/main/git-images/rewrap-step-1.jpg" align="left" height="600">
+<br clear="left">
 * Tap the three dots icon
 * Select "Add to other playlist"
 <img src="https://github.com/nickschirloff/spotify-rewrap/blob/main/git-images/rewrap-step-1.jpg" align="left" height="600">
+<br clear="left">
 * Create a new Playlist. It should be something along "Wrapped - {Year}"
 <img src="https://github.com/nickschirloff/spotify-rewrap/blob/main/git-images/rewrap-step-1.jpg" align="left" height="600">
+<br clear="left">
 
 
 The playlist can be named anything as long as it has the word "Wrapped" in the title, as well as a year within 2017-2023 (inclusive, the years Wrapped has been available). The given template is just to ensure playlists are not accidentally skipped by the playlist filter in the app.
