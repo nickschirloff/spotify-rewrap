@@ -11,6 +11,8 @@ For example:
 
 This project is still currently in development. The roadmap and completed steps are listed below.
 
+<img src="https://github.com/nickschirloff/spotify-rewrap/blob/main/git-images/rewrap-example-1.jpg" align="left" height="600">
+<br clear="left">
 
 # Inspiration
 
