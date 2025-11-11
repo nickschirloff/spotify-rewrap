@@ -1,3 +1,18 @@
+# This project is no longer under active development.
+As I have become more experienced with Typescript, the thought of renewing this project has crossed my mind several times. But the actions of Spotify have routinely soured my interest in doing so.
+Here are the reasons as to why (in short):
+
+1. Spotify hardly pays its artists. Already a big issue in the music industry, but Spotify is one of the worst examples.
+2. Spotify's CEO invested into a defense company that produces weapons that use AI. On top of that obviously being inhumane and dangerous, this is also plainly antithetical to the point of music, which has traditionally been anti-war.
+3. Spotify has lost basically all of what made it special. It felt fun and unique to be on Spotify rather than other apps. That all changed when they started implementing AI in pointless, boring ways, like the DJ. Wrapped has always been a fun experience for me, it was cool seeing my listening habits over the year(s). However, 2024's was *boring*, and felt like it was generated through AI, lacking all creativity that was present before.
+4. Spotify pulled a scummy move not long ago where they bumped up the price of the basic ad-free plan, justifying it by adding more audiobook or podcast hours or something (I didn't and don't care enough to look up the specifics). Then, they introduced a new plan below that with ad-free listening, but none of the fluff. Basically, if you didn't notice and change your plan to the new, cheaper option, you would be paying *more* for ad-free listening for the prize of a couple hours of fluff you probably won't use. Excellent work.
+
+As mentioned, I will no longer be working on this project so long as these policies and people are still active at Spotify, which probably means forever. You are allowed to develop the idea for this project on your if you wish, as long as credit for the original idea is provided, and so long as it is not locked behind a paywall.
+
+Please support your favorite artists via Bandcamp or through direct merch and music sales. Consider changing music providers if you use Spotify. I personally download all my music myself, and use the 'Anywhere - Music Player' app on iOS to listen to it. I am not sponsored by them, but I very much recommend that app for music listening. It works great, and has most of the features of other music apps. Getting the music files is the difficult part, but for that, you can download them from your favorite artists' website, or through other means *cough, cough, yt-dlp + MusicBrainz Picard*. This comes with the advantage of not having ads, and you can listen to songs that aren't on any streaming platforms!
+
+I get it's ironic to monologue (to few, if any readers) about this one bad company, when I use the products of multiple others on a daily basis. But any way I can control what my money goes to, I'll take. Plus, it was nice to rant about why my favorite app sucks now.
+
 
 # ReWrap
 
